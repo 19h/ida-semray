@@ -68,15 +68,15 @@ except Exception:
 # --- Optional CodeDumper integration imports ---
 CODEDUMP_AVAILABLE = False
 try:
-    from codedump.codedump import (
+    from codedump import (
         find_callers_recursive as cd_find_callers_recursive,
         find_callees_recursive as cd_find_callees_recursive,
         decompile_functions_main as cd_decompile_functions_main,
         disassemble_functions_main as cd_disassemble_functions_main,
         find_vtables as cd_find_vtables,
     )
-    from codedump.micro_analyzer import analyze_functions_ctree as cd_analyze_functions_ctree
-    from codedump.ptn_utils import PTNEmitter as CD_PTNEmitter
+    from micro_analyzer import analyze_functions_ctree as cd_analyze_functions_ctree
+    from ptn_utils import PTNEmitter as CD_PTNEmitter
 
     CODEDUMP_AVAILABLE = True
     print("SemRay DEBUG: CodeDumper integration available.")
@@ -120,7 +120,7 @@ ACTION_ID_CTX_PREFIX_DEPTH = "semray:googleai:ctx:depth:"
 MENU_PATH_CTX = "SemRay Analysis/"
 
 # Google AI Configuration
-GOOGLE_AI_API_KEY = os.environ.get("GOOGLE_API_KEY")
+GOOGLE_AI_API_KEY = "***REMOVED***"  #os.environ.get("GOOGLE_API_KEY")
 DEFAULT_GEMINI_MODEL = "gemini-flash-latest"
 MODELS_TO_REGISTER = [DEFAULT_GEMINI_MODEL]
 
