@@ -120,7 +120,7 @@ ACTION_ID_CTX_PREFIX_DEPTH = "semray:googleai:ctx:depth:"
 MENU_PATH_CTX = "SemRay Analysis/"
 
 # Google AI Configuration
-GOOGLE_AI_API_KEY = "***REMOVED***"  #os.environ.get("GOOGLE_API_KEY")
+GOOGLE_AI_API_KEY = os.environ.get("GOOGLE_API_KEY")
 DEFAULT_GEMINI_MODEL = "gemini-flash-latest"
 MODELS_TO_REGISTER = [DEFAULT_GEMINI_MODEL]
 
